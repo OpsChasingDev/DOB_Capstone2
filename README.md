@@ -1,2 +1,2 @@
 # DOB_Capstone2
-Deploying K8s cluster in AWS with Ansible
+Deploying to a Terraform-provisioned EKS cluster with Ansible
