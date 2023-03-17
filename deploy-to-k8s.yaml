@@ -9,3 +9,6 @@
         kind: Namespace
         state: present
         kubeconfig: C:\\git\\DOB_Capstone2\\kubeconfig_myapp-eks-cluster
+    - name: Deploy nginx app
+      k8s:
+        src: nginx-config.yaml
