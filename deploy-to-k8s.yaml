@@ -1,3 +1,6 @@
+# kubeconfig path can be exported as env var using the below:
+# export K8S_AUTH_KUBECONFIG=C:\\git\\DOB_Capstone2\\kubeconfig_myapp-eks-cluster
+# "kubeconfig" lines must be removed from play after doing so
 ---
 - name: Deploy app in new namespace
   hosts: localhost
