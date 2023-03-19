@@ -1,6 +1,19 @@
 # kubeconfig path can be exported as env var using the below:
 # export K8S_AUTH_KUBECONFIG=C:\\git\\DOB_Capstone2\\kubeconfig_myapp-eks-cluster
 # "kubeconfig" lines must be removed from play after doing so
+
+# *** More notes on the statement on the "kubeconfig:" lines ***
+# 
+# Newer versions of the eks terraform module no longer print out the kubeconfig file
+# that would be read by this playbook, so additional logic would need to take place before
+# using this playbook that would run the aws cli command for updating the kubeconfig file
+# and placing it in a directory the playbook could then read it from
+# 
+# command to update kubeconfig file:
+# aws eks update-kubeconfig --name myapp-eks-cluster
+# 
+# referemce for information on this change
+# https://stackoverflow.com/questions/64820975/how-to-retrieve-the-eks-kubeconfig/65041970#65041970
 ---
 - name: Deploy app in new namespace
   hosts: localhost
